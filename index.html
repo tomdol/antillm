@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>antiLLM</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.css" />
+    <link rel="stylesheet" href="night.css">
+    <link rel="stylesheet" href="tuning.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/highlight/monokai.min.css"
+        integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code" rel="stylesheet">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h2 style="letter-spacing: 1em; margin-right: -1em;"><span class="red">anti</span>LLM</h2>
+                    <br>
+                    <br>
+                    <div class="vsmall">Tomasz Dołbniak&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;2025&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;PyData Trójmiasto #42</div>
+                </section>
+                <section>
+                    <h3 class="red">Agenda</h3>
+                    <ul class="loose">
+                        <li class="fragment">LLM ranting</li>
+                        <li class="fragment">Complaints</li>
+                        <li class="fragment">Finger pointing</li>
+                        <li class="fragment">No code samples</li>
+                        <li class="fragment">No technical information</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="red">Agenda (but seriously)</h3>
+                    <ul class="loose">
+                        <li class="fragment">Negative impact of widespread LLM deployment</li>
+                        <li class="fragment">How LLMs affect various aspects of our lives</li>
+                        <li class="fragment">Conclusions from several studies related to LLMs</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="red">Where did this idea come from?</h3>
+                    <img src="img/paper.png" alt=""><br>
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6097646"
+                        class="small">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6097646</a>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h4 class="red">Disclaimer</h4>
+                    <img src="img/disclaimer.png" alt="">
+                    <img src="img/disclaimer1.png" alt="">
+                    <p class="italic">This presentation was created with the assistance of an LLM</p>
+                </section>
+                <section>
+                    <h3 class="red">What I want AI to be used for</h3>
+                    <div style="display: flex;">
+                        <div style="flex: 1;"><img src="img/hapsik1.jpg" style="width: 60%"></div>
+                        <div style="flex: 1; display: flex; flex-direction: column;" class="fragment">
+                            <div style="flex: 1;"><img src="img/saved_dog.png" alt=""></div>
+                            <div style="flex: 1;"><a
+                                    href="https://www.the-scientist.com/chatgpt-and-alphafold-help-design-personalized-vaccine-for-dog-with-cancer-74227"
+                                    class="small">ChatGPT and AlphaFold Help Design Personalized Vaccine for Dog with
+                                    Cancer</a></div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3 class="red">Tech bros sh*t talk</h3>
+                    <img src="img/gavin.png" alt="">
+                </section>
+                <section>
+                    <h3 class="red">AI is going to take your job</h3>
+                    <img src="img/amodei.png" style="width: 80%;">
+                </section>
+                <section>
+                    <h3 class="red">12 more months, trust me bro</h3>
+                    <img src="img/amodei3.png" alt="">
+                </section>
+                <section>
+                    <div style="display: flex">
+                        <div style="flex: 1">
+                            <img src="img/jason.png" alt="">
+                        </div>
+                        <div style="flex: 1">
+                            <br><br>
+                            <a href="https://www.businessinsider.com/jensen-huang-500k-engineers-250k-ai-tokens-nvidia-compute-2026-3?IR=T">www.businessinsider.com/jensen-huang-500k-engineers-250k-ai-tokens-nvidia-compute-2026-3?IR=T</a>
+                            <br><br>
+                            <a href="https://finance.yahoo.com/news/jensen-huang-floats-giving-engineers-040201197.html">finance.yahoo.com/news/jensen-huang-floats-giving-engineers-040201197.html</a>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="red">Sam Altman</h3>
+                    <div style="display: flex">
+                        <div style="flex: 1">
+                            <img src="img/altman.png" alt="">
+                            <br><br>
+                            <img src="img/altman3.png" alt="">
+                        </div>
+                        <div style="flex: 1">
+                            <br>
+                            <img src="img/altman2.png" alt="">
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="red">The Doomsday LLM</h3>
+                    <img src="img/mythos.png" style="width: 50%">
+                </section>
+                <section>
+                    <h3 class="red">Fearmongering for profit</h3>
+                    <img src="img/amodei2.png" alt=""><br>
+                    <a href="https://www.youtube.com/watch?v=W-EzAu_xpM8"
+                        class="small">www.youtube.com/watch?v=W-EzAu_xpM8</a>
+                    <ul>
+                        <li class="fragment">Company valuation & fundraising pressure</li>
+                        <li class="fragment">A promise to save on labor costs</li>
+                        <li class="fragment">Enterprise FOMO => AI usage mandates</li>
+                        <li class="fragment">Cover for post-pandemic headcount reduction</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="red">Our AI is going to take your job and make you unhirable so buy our subscription and
+                        use our AI</h3>
+                </section>
+                <section>
+                    <h3 class="red">Bonus: Copilot's TOS</h3>
+                    <a href="https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/termsofuse">www.microsoft.com/en-us/microsoft-copilot/for-individuals/termsofuse</a>
+                    <br><br>
+                    <img src="img/tos.png" class="fragment">
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2 class="red">Employment & Workforce impact</h2>
+                </section>
+                <section>
+                    <h3 class="red">Stranded at the start</h3>
+                    <a href="https://static1.squarespace.com/static/6197797102be715f55c0e0a1/t/6889055d25352c5b3f28c202/1753810269213/No+Country+for+Young+Grads+V_Final7.29.25+%281%29.pdf"
+                        class="small">"No Country for Young Grads" - The Structural Forces That Are Reshaping
+                        Entry-Level Employment</a><br>
+                    <ul>
+                        <li class="fragment">Demand for senior roles constantly increasing</li>
+                        <li class="fragment">Disappearing junior roles</li>
+                        <li class="fragment">AI use (and hype) is the accelerant</li>
+                        <li class="fragment">Unemployment, underemployment & degree value erosion</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="red">Junior Developer Death Spiral</h3>
+                    <ul>
+                        <li class="fragment">Juniors have naturally progressed by starting with easy work, boilerplate,
+                            etc</li>
+                        <li class="fragment">Suppose AI takes over all the junior level work</li>
+                        <li class="fragment">The natural <code>junior => mid => senior</code> path is disrupted</li>
+                        <li class="fragment">No growth for juniors => no seniors in the future</li>
+                        <li class="fragment">Short term profits over long term goals</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="red">The job search</h3>
+                    <ul>
+                        <li class="fragment">The LLM-powered CV screening tools</li>
+                        <li class="fragment">AI-powered candidate scoring and evaluation</li>
+                        <li class="fragment">Candidates cheating with AI tools</li>
+                        <li class="fragment">Employers using AI to justify the low salaries</li>
+                    </ul>
+                    <br><br>
+                    <div class="fragment">
+                        <img src="img/recruitment.png" alt=""><br>
+                        <a href="https://www.youtube.com/watch?v=LcQGXC1f-8s"
+                            class="small">www.youtube.com/watch?v=LcQGXC1f-8s</a>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3 class="red">LLM-generated code quality</h2>
+                </section>
+                <section>
+                    <h3 class="red">The AI Slop Layer</h3>
+                    <ul>
+                        <li>LLM generated low quality and/or buggy code</li>
+                        <li class="fragment">Unreviewed, unmaintainable</li>
+                        <li class="fragment">Nobody really understands how it works</li>
+                        <li class="fragment">These are attributed to vibe coding rather than AI-assisted coding</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="red">Security vulnerabilities</h3>
+                    <ul>
+                        <li>Veracode's 2025 GenAI Code Security Report</li>
+                        <li class="fragment">Vulnerabilities in 45% of all test cases</li>
+                        <li class="fragment">Java had the worst security failure rate at over 70%</li>
+                        <li class="fragment">1,5-2x more security issues than in human-written code</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="red">OSS contributions</h3>
+                    <br>
+                    <img src="img/github.png">
+                    <br><br>
+                    <a href="https://www.kushcreates.com/blogs/inside-the-open-source-prs-massacre-of-github"
+                        class="fragment">www.kushcreates.com/blogs/inside-the-open-source-prs-massacre-of-github</a>
+                </section>
+                <section>
+                    <img src="img/indian.png" alt="">
+                </section>
+                <section>
+                    <h3 class="red">AI slopocalypse</h3>
+                    <img src="img/slopocalypse.png" alt="">
+                    <br><br>
+                    <a href="https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/" class="fragment">"An AI agent published a hit piece on me"</a>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3 class="red">Alleged success story</h3>
+                    <a href="https://www.anthropic.com/engineering/building-c-compiler">www.anthropic.com/engineering/building-c-compiler</a>
+                    <br><br>
+                    <ul class="fragment">
+                        <li>16 parallel agents</li>
+                        <li>$20000 worth of tokens</li>
+                        <li>100 000 lines of Rust</li>
+                        <li>A compiler capable of building the Linux kernel</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="red">Verification</h3>
+                    <ul>
+                        <li>The built kernel did not boot</li>
+                        <li class="fragment">No linker (fallback to GCC)</li>
+                        <li class="fragment">GCC <span class="code red">-O0</span>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;Anthropic <span class="code red">-O3</span></li>
+                        <li class="fragment">Can't compile hello world <br><br>
+                            <img src="img/hello-world.png">
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3 class="red">Sociological effects</h3>
+                </section>
+                <section>
+                    <h3 class="red">The weird ones</h3>
+                    <ul>
+                        <li class="fragment">Using AI for therapy</li>
+                        <li class="fragment">"Dating" or substituting human relationships</li>
+                        <li class="fragment">Addictive dependency similar to social media effects</li>
+                        <li class="fragment">Outsourcing critical thinking and reasoning</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="red">The scary ones</h3>
+                    <ul>
+                        <li class="fragment">Suicide advices from AI agents</li>
+                        <li class="fragment">Growing anxiety</li>
+                        <li class="fragment">Writing/codings skills degradation</li>
+                        <li class="fragment">Power concentration - only a handful of providers</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3 class="red">Environmental effects</h3>
+                    <ul>
+                        <li>Water scarcity around datacenters</li>
+                        <li class="fragment">Electricity prices</li>
+                        <li class="fragment">Noise pollution</li>
+                        <li class="fragment">Emissions</li>
+                    </ul>
+                    <br><br>
+                    <img src="img/elon.jpeg" class="fragment" style="width: 50%">
+                </section>
+                <section>
+                    <img src="img/wasteland.png" alt=""><br>
+                    <a href="https://www.youtube.com/watch?v=3VJT2JeDCyw"
+                        class="small">https://www.youtube.com/watch?v=3VJT2JeDCyw</a>
+                    <ul>
+                        <li class="fragment">xAI has built the "Colossus" datacenter without the required permissions</li>
+                        <li class="fragment">The grid in Memphis was not able to provide enough power</li>
+                        <li class="fragment">xAI has built their own power plant using gas turbines</li>
+                        <li class="fragment">Huge emissions of <span class="red">formaldehydes</span>, <span class="red">NOx</span> and <span class="red">PM2.5</span></li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3 class="red">Research</h3>
+                </section>
+                <section>
+                    <h3>Wharton research</h3>
+                    https://www.reddit.com/r/ArtificialInteligence/comments/1s154ig/wharton_researchers_just_proved_why_just_review/
+                </section>
+                <section>
+                    <img src="img/karpathy1.png" alt="">
+                </section>
+                <section>
+                    <img src="img/microsoft_research.png" alt="">
+                    <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf"
+                        class="small">https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf</a>
+                </section>
+                <section>
+                    <h3 class="red">Key findings</h3>
+                    <ul>
+                        <li>Perceived reduction of effort of critical thinking</li>
+                        <li>Increasing over-reliance on AI</li>
+                        <li>Overuse of AI leading to "brain atrophy"</li>
+                    </ul>
+                </section>
+                <section>
+                    <img src="img/mit.png" alt=""><br>
+                    <a href="https://arxiv.org/abs/2506.08872" class="small">https://arxiv.org/abs/2506.08872</a>
+                </section>
+                <section>
+                    <ul>
+                        <li>LLM-to-Brain vs Brain-to-LLM</li>
+                    </ul>
+                </section>
+                <section>
+                    https://unreplug.com/blog/noosphere-pollution.html
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2 class="red">Key takeaways</h2>
+                </section>
+                <section>
+                    <h3 class="red">Stay aware</h3>
+                    <ul>
+                        <li>Cognitive Surrender</li>
+                        <li class="fragment">Hype train riding</li>
+                        <li class="fragment">We are lazy by nature</li>
+                        <li class="fragment">Over-reliance on AI might hurt you</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="red">Observe your satisfaction</h3>
+                    <ul>
+                        <li>Dopamine shots from hard work</li>
+                        <li class="fragment">The feeling when everyting "clicks"</li>
+                        <li class="fragment">Don't give up coding if it makes you feel good</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="red">The ultimate protip</h3>
+                    <img src="img/mistakes.png" class="fragment">
+                </section>
+            </section>
+            <section>
+                <h2 class="red">Thank you!</h2>
+                
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.js"
+        integrity="sha512-K7P1+dtPriNNHlE4aJr+JKx1X6R0wvy24QBqL2CxaHc4XdkQjrH2t2FCrgoxZGMh6s1TgigNLEdrWa6NJra6Zg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/highlight/highlight.min.js"
+        integrity="sha512-NVdqCvsrfhXUYzGTEGGBFf5jxheVVcglfdvO8r+WdG0BKMrRYvaiCGIC0S+wf4hkE3Xq43gTd1k3Mwl/UNgdvw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        Reveal.initialize({
+            controls: false,
+            slideNumber: 'c/t',
+            transition: 'fade',
+            transitionSpeed: 'fast',
+            plugins: [RevealHighlight]
+        });
+    </script>
+</body>
+
+</html>
